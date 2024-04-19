@@ -1,0 +1,61 @@
+
+def ipv4_conv():
+    ip = input("Please enter your IPv4: ")
+
+    ip_splits = ip.split(".")
+    ip1 = int(ip_splits[0])
+    ip2 = int(ip_splits[1])
+    ip3 = int( ip_splits[2])
+    ip4 = int(ip_splits[3])
+
+    octet1 = [0, 0, 0, 0, 0, 0, 0, 0]
+    octet2 = [0, 0, 0, 0, 0, 0, 0, 0]
+    octet3 = [0, 0, 0, 0, 0, 0, 0, 0]
+    octet4 = [0, 0, 0, 0, 0, 0, 0, 0]
+
+    if ip1 >= 128: ip1 -= 128; octet1[0] = 1
+    if ip1 >= 64: ip1 -= 64; octet1[1] = 1
+    if ip1 >= 32: ip1 -= 32; octet1[2] = 1
+    if ip1 >= 16: ip1 -= 16; octet1[3] = 1
+    if ip1 >= 8: ip1 -= 8; octet1[4] = 1
+    if ip1 >= 4: ip1 -= 4; octet1[5] = 1
+    if ip1 >= 2: ip1 -= 2; octet1[6] = 1
+    if ip1 >= 1: octet1[7] = 1
+
+    if ip2 >= 128: ip2 -= 128; octet2[0] = 1
+    if ip2 >= 64: ip2 -= 64; octet2[1] = 1
+    if ip2 >= 32: ip2 -= 32; octet2[2] = 1
+    if ip2 >= 16: ip2 -= 16; octet2[3] = 1
+    if ip2 >= 8: ip2 -= 8; octet2[4] = 1
+    if ip2>= 4: ip2 -= 4; octet2[5] = 1
+    if ip2 >= 2: ip2 -= 2; octet2[6] = 1
+    if ip2 >= 1: octet2[7] = 1
+
+    if ip3 >= 128: ip3  -= 128; octet3[0] = 1
+    if ip3 >= 64: ip3  -= 64; octet3[1] = 1
+    if ip3 >= 32: ip3  -= 32; octet3[2] = 1
+    if ip3 >= 16: ip3  -= 16; octet3[3] = 1
+    if ip3 >= 8: ip3  -= 8; octet3[4] = 1
+    if ip3 >= 4: ip3  -= 4; octet3[5] = 1
+    if ip3 >= 2: ip3  -= 2; octet3[6] = 1
+    if ip3 >= 1: octet3[7] = 1
+
+    if ip4 >= 128: ip4 -= 128; octet4[0] = 1
+    if ip4 >= 64: ip4 -= 64; octet4[1] = 1
+    if ip4 >= 32: ip4 -= 32; octet4[2] = 1
+    if ip4 >= 16: ip4 -= 16; octet4[3] = 1
+    if ip4 >= 8: ip4 -= 8; octet4[4] = 1
+    if ip4 >= 4: ip4 -= 4; octet4[5] = 1
+    if ip4 >= 2: ip4 -= 2; octet4[6] = 1
+    if ip4 >= 1: octet4[7] = 1
+
+    for o in octet1: print(o,end="")
+    print("    ",end = "")
+    for o in octet2: print(o, end="")
+    print("   ",end = "")
+    for o in octet3: print(o, end="")
+    print("   ",end = "")
+    for o in octet4: print(o, end="")
+    print("   ",end = "")
+
+ipv4_conv()
