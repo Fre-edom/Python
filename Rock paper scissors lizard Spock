@@ -1,0 +1,365 @@
+-------------------------------------  # Sheldon rock - paper - scissors - lizard - Spock ---------------------------------------------------------------
+
+https://www.youtube.com/watch?v=Kov2G0GouBw
+
+--------------------------------------------- First attempt (works with errors) -------------------------------------------------------------------------------------
+
+import random
+
+
+
+print("As Sheldon explains:\nScissors cuts paper, paper covers rock,\n rock crushes lizard, lizard poisons Spock,\nSpock smashes scissors,\
+scissors decapitates lizard,\nlizard eats paper, paper disproves Spock,\nSpock vaporizes rock, and as it always has,\nrock crushes scissors")
+print("-------------------------------------------------------------------------------------------------")
+
+while True:
+
+  def game():
+    pass
+
+
+  options = ["rock", "paper", "scissors", "lizard", "Spock"]
+
+  PC = random.choice(options)
+  user = None
+
+  while user not in options:
+    user = input("Please choose : rock, paper, scissors, lizard, Spock:    ").lower()
+
+    if user == "paper":
+      if PC == "paper":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "scissors" :
+        print("PC: " + PC)
+        print(" Scissors cuts paper, PC wins!")
+      elif PC == "rock":
+        print("PC: " + PC)
+        print("Paper covers rock, You win!")
+      elif PC == "lizard":
+        print("PC: " + PC)
+        print("Lizard eats paper, PC wins! ")
+      elif PC == "Spock":
+        print("PC: " + PC)
+        print("Paper disproves Spock, you win! ")
+
+    elif user == "rock":
+      if PC == "rock":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "paper":
+        print("PC: " + PC)
+        print("Paper covers rock, PC wins!")
+      elif PC == "Scissors":
+        print("PC: " + PC)
+        print("Rock crushes scissors, you win!")
+      elif PC == "lizard":
+        print("PC: " + PC)
+        print("Scissors decapitates lizard, you win!")
+      elif PC == "Spock":
+        print("PC: " + PC)
+        print("Spock vaporizes rock, PC wins!")
+
+    elif    user == "scissors":
+      if PC == "scissors":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "paper":
+        print("PC: " + PC)
+        print("Scissors cuts paper, you win!!")
+      elif PC == "rock":
+        print("PC: " + PC)
+        print("Rock crushes scissors, PC wins!")
+      elif PC == "lizard":
+        print("PC: " + PC)
+        print("Scissors decapitates lizard, you win!")
+      elif PC == "Spock":
+        print("PC: " + PC)
+        print("Spock smashes scissors, PC wins!")
+
+    elif user == "lizard":
+      if PC == "lizard":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "rock":
+        print("Rock crushes lizard, PC wins!")
+      elif PC == "paper":
+        print("PC: " + PC)
+        print("Lizard eats paper, you win!")
+      elif PC == "scissors":
+        print("PC: " + PC)
+        print("Scissors decapitates lizard, you win!")
+      elif PC == "Spock":
+        print("PC: " + PC)
+        print("Lizard poisons Spock. you win!")
+
+    elif user == "Spock":
+      if PC == "Spock":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "rock":
+        print("PC: " + PC)
+        print("Spock vaporizes rock, you win!")
+      elif PC == "paper":
+        print("PC: " + PC)
+        print("Paper disproves Spock, PC wins!!")
+      elif PC == "scissors":
+        print("PC: " + PC)
+        print("Spock smashes scissors, you win!")
+      elif PC == "lizard":
+        print("PC: " + PC)
+        print("Lizard poisons Spock, PC wins!")
+
+  again = input("Wanna play again? ")
+
+  if again != "Yes" or "Sure":
+    print("Byeeeeeee ")
+    break
+
+    
+
+--------------------------------------------- Second attempt (works with error in again) -------------------------------------------------------------------------------------
+
+
+import random
+
+
+
+print("As Sheldon explains:\nScissors cuts paper, paper covers rock,\n rock crushes lizard, lizard poisons Spock,\nSpock smashes scissors,\
+scissors decapitates lizard,\nlizard eats paper, paper disproves Spock,\nSpock vaporizes rock, and as it always has,\nrock crushes scissors")
+print("-------------------------------------------------------------------------------------------------")
+
+while True:
+
+  def game():
+    pass
+
+
+  options = ["rock", "paper", "scissors", "lizard", "Spock"]
+
+  PC = random.choice(options)
+  user = None
+
+  while user not in options:
+    user = input("Please choose : rock, paper, scissors, lizard, Spock:    ").lower()
+
+    if user == "paper":
+      if PC == "paper":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "scissors" :
+        print("PC: " + PC)
+        print(" Scissors cuts paper, PC wins!")
+      elif PC == "rock":
+        print("PC: " + PC)
+        print("Paper covers rock, You win!")
+      elif PC == "lizard":
+        print("PC: " + PC)
+        print("Lizard eats paper, PC wins! ")
+      elif PC == "Spock":
+        print("PC: " + PC)
+        print("Paper disproves Spock, you win! ")
+
+    elif user == "rock":
+      if PC == "rock":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "paper":
+        print("PC: " + PC)
+        print("Paper covers rock, PC wins!")
+      elif PC == "Scissors":
+        print("PC: " + PC)
+        print("Rock crushes scissors, you win!")
+      elif PC == "lizard":
+        print("PC: " + PC)
+        print("Scissors decapitates lizard, you win!")
+      elif PC == "Spock":
+        print("PC: " + PC)
+        print("Spock vaporizes rock, PC wins!")
+
+    elif    user == "scissors":
+      if PC == "scissors":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "paper":
+        print("PC: " + PC)
+        print("Scissors cuts paper, you win!!")
+      elif PC == "rock":
+        print("PC: " + PC)
+        print("Rock crushes scissors, PC wins!")
+      elif PC == "lizard":
+        print("PC: " + PC)
+        print("Scissors decapitates lizard, you win!")
+      elif PC == "Spock":
+        print("PC: " + PC)
+        print("Spock smashes scissors, PC wins!")
+
+    elif user == "lizard":
+      if PC == "lizard":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "rock":
+        print("Rock crushes lizard, PC wins!")
+      elif PC == "paper":
+        print("PC: " + PC)
+        print("Lizard eats paper, you win!")
+      elif PC == "scissors":
+        print("PC: " + PC)
+        print("Scissors decapitates lizard, you win!")
+      elif PC == "Spock":
+        print("PC: " + PC)
+        print("Lizard poisons Spock. you win!")
+
+    elif user == "Spock":
+      if PC == "Spock":
+        print("PC: " + PC)
+        print("Tie")
+      elif PC == "rock":
+        print("PC: " + PC)
+        print("Spock vaporizes rock, you win!")
+      elif PC == "paper":
+        print("PC: " + PC)
+        print("Paper disproves Spock, PC wins!!")
+      elif PC == "scissors":
+        print("PC: " + PC)
+        print("Spock smashes scissors, you win!")
+      elif PC == "lizard":
+        print("PC: " + PC)
+        print("Lizard poisons Spock, PC wins!")
+
+  again = input("Wanna play again? ")
+
+  if again != "Yes" or "Sure":
+    print("Byeeeeeee ")
+    break
+
+
+
+
+--------------------------------------------- Third attempt (works with no error but needs improvement) -------------------------------------------------------------------------------------
+
+
+
+
+
+import random
+
+print("As Sheldon explains:\nScissors cuts paper, paper covers rock,\n rock crushes lizard, lizard poisons Spock,\nSpock smashes scissors,\
+scissors decapitates lizard,\nlizard eats paper, paper disproves Spock,\nSpock vaporizes rock, and as it always has,\nrock crushes scissors")
+print("-------------------------------------------------------------------------------------------------")
+
+#play = True
+
+def game():
+    times = 0
+
+    options = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+
+    PC = random.choice(options)
+    user = None
+
+    while times < 3:
+        user = input("Please choose : Rock, Paper, Scissors, Lizard, Spock:    ").title()
+
+        if user == "Paper":
+            if PC == "Paper":
+                print("PC: " + PC)
+                print("Tie")
+            elif PC == "Scissors":
+                print("PC: " + PC)
+                print(" Scissors cuts paper, PC wins!")
+            elif PC == "Rock":
+                print("PC: " + PC)
+                print("Paper covers rock, You win!")
+            elif PC == "Lizard":
+                print("PC: " + PC)
+                print("Lizard eats paper, PC wins! ")
+            elif PC == "Spock":
+                print("PC: " + PC)
+                print("Paper disproves Spock, you win! ")
+
+        elif user == "Rock":
+            if PC == "Rock":
+                print("PC: " + PC)
+                print("Tie")
+            elif PC == "Paper":
+                print("PC: " + PC)
+                print("Paper covers rock, PC wins!")
+            elif PC == "Scissors":
+                print("PC: " + PC)
+                print("Rock crushes scissors, you win!")
+            elif PC == "Lizard":
+                print("PC: " + PC)
+                print("Scissors decapitates lizard, you win!")
+            elif PC == "Spock":
+                print("PC: " + PC)
+                print("Spock vaporizes rock, PC wins!")
+
+        elif user == "Scissors":
+            if PC == "Scissors":
+                print("PC: " + PC)
+                print("Tie")
+            elif PC == "Paper":
+                print("PC: " + PC)
+                print("Scissors cuts paper, you win!!")
+            elif PC == "Rock":
+                print("PC: " + PC)
+                print("Rock crushes scissors, PC wins!")
+            elif PC == "Lizard":
+                print("PC: " + PC)
+                print("Scissors decapitates lizard, you win!")
+            elif PC == "Spock":
+                print("PC: " + PC)
+                print("Spock smashes scissors, PC wins!")
+
+        elif user == "Lizard":
+            if PC == "Lizard":
+                print("PC: " + PC)
+                print("Tie")
+            elif PC == "Rock":
+                print("Rock crushes lizard, PC wins!")
+            elif PC == "Paper":
+                print("PC: " + PC)
+                print("Lizard eats paper, you win!")
+            elif PC == "Scissors":
+                print("PC: " + PC)
+                print("Scissors decapitates lizard, you win!")
+            elif PC == "Spock":
+                print("PC: " + PC)
+                print("Lizard poisons Spock. you win!")
+
+        elif user == "Spock":
+            if PC == "Spock":
+                print("PC: " + PC)
+                print("Tie")
+            elif PC == "Rock":
+                print("PC: " + PC)
+                print("Spock vaporizes rock, you win!")
+            elif PC == "Paper":
+                print("PC: " + PC)
+                print("Paper disproves Spock, PC wins!!")
+            elif PC == "scissors":
+                print("PC: " + PC)
+                print("Spock smashes scissors, you win!")
+            elif PC == "Lizard":
+                print("PC: " + PC)
+                print("Lizard poisons Spock, PC wins!")
+
+
+        times += 1
+    again()
+
+
+def again():
+
+    play_again = input ("Wanna play again?  ").title()
+    play_options = ["Yes", "Sure"]
+
+    if play_again  in play_options :
+        game()
+    elif play_again  not in play_options:
+        print("Bye")
+        quit()
+  
+      
+game()
