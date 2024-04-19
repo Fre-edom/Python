@@ -1,0 +1,31 @@
+
+# Ask Guru game
+
+import random
+from Greek_sayings import Gs
+
+
+print("Ask Guru any question and you shall receive an answer  ")
+print("If you wish to quit just type: \"Stop\"")
+
+#-----------------------------------------------------------------------------------------------------------------------------------#
+
+
+def ask_Guru():
+    ask = input("What is your question for Guru?   ")     
+    if ask.title() == "Stop":
+        print("Hope you have an amazing rest of the day... Bye for now! ")
+        quit()
+    else:
+      #  while ask.title() != "Stop":
+        print(random.choice(Gs))
+
+def play_again():
+    ask = input("Do you want to keep asking questions?\nIf yes, go ahead and ask, if not just type Stop or No.    ")
+    while ask.title()  != "Stop" or "No" or "Nope":
+        ask_Guru()
+
+
+
+ask_Guru()
+play_again()
